@@ -6,16 +6,20 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title>Smart House - Prototype</title>
+		<!-- Slick-->
+		<link rel="stylesheet" type="text/css" href="slick/slick.css">
+		<link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
+		<!-- Главный стиль-->
 		<link href="assets/styles/app.min.css" rel="stylesheet">
 		<!-- Шрифт-->
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
 	</head>
 
 	<body class="page">
-		<div class="main">
-			<div class="container-fluid">
-				<!-- Меню-->
-				<nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top brd-g">
+		<!-- навбар -->
+		<div class="navbar-wrap">
+			<div class="container">
+				<nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top brd-g d-flex">
 					<a href="#" class="navbar-brand">Логотип</a>
 					<button type="button" data-toggle="collapse" data-target="#main-menu" class="navbar-toggler">
 						<span class="navbar-toggler-icon"></span>
@@ -44,51 +48,96 @@
 					</div>
 				</nav>
 			</div>
-			<!-- Слайдер-->
-			<div class="row">
-				<div class="container-fluid block-slider">
-					<div id="mainSlider" data-ride="carousel" class="carousel slide">
-						<!-- Буллеты-->
-						<!-- Слайды-->
-						<div class="carousel-inner">
-							<div class="carousel-item active">
-								<div style="width: 100%; height: 400px;" class="slider__item bg-g">
-									<div class="container p-3">
-										<div class="col-12">
-											<div class="row justify-content-between align-items-start">
-												<div class="col-3 bg-lg c-b p-3 font-bold">Мир умной автоматики для вашего дома</div>
-												<div class="header-call col-3 bg-lg c-b p-3">
-													<div class="header-call__title">Позвоните нам прямо сейчас</div>
-													<h3 class="header-call__phone">+7 (978) 090-41-31</h3>
-													<div class="header-call__btn text-right">
-														<button class="p-1">Заказать звонок</button>
-													</div>
+		</div>
+		<!-- /навбар -->
+		<!-- слайдер-->
+		<div class="slider">
+			<div class="container-fluid block-slider bg-g">
+				<div id="mainSlider" data-ride="carousel" class="carousel slide">
+					<!-- Буллеты-->
+					<!-- Слайды-->
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<div style="width: 100%;" class="slider__item">
+								<!-- Ряд 1-->
+								<div class="container p-3">
+									<div class="col-12">
+										<div class="row justify-content-between align-items-start">
+											<div class="col-3 bg-lg c-b p-3 font-bold">Мир умной автоматики для вашего дома</div>
+											<div class="header-call col-3 bg-lg c-b p-3">
+												<div class="header-call__title">Позвоните нам прямо сейчас</div>
+												<h3 class="header-call__phone">+7 (978) 090-41-31</h3>
+												<div class="header-call__btn text-right">
+													<button data-toggle="modal" data-target="#callback-banner" class="btn btn-secondary p-1">Заказать звонок</button>
 												</div>
 											</div>
 										</div>
 									</div>
-									<div class="row">
-										<div class="container-fluid">
-											<div class="col-12 text-center bg-lg py-4 slider-gradient c-lg">
-												<div class="row justify-content-center">РЕМОНТ КВАРТИРЫ ЗА 60 ДНЕЙ! ОТ 3900 РУБ/М2</div>
-												<div class="sepr-hr brd-w my-2"></div>
-												<div class="row justify-content-center">ОНЛАЙН - ТРАНСЛЯЦИЯ ВАШЕГО РЕМОНТА</div>
-												<div class="row justify-content-center font-bold mt-1">ПРОПИСЫВАЕМ ГАРАНТИЮ В ДОГОВОРЕ НА 5 ЛЕТ!</div>
-											</div>
+								</div>
+								<!-- Ряд 2-->
+								<div class="row">
+									<div class="container-fluid">
+										<div class="col-12 text-center bg-lg py-4 slider-gradient c-lg">
+											<div class="row justify-content-center">РЕМОНТ КВАРТИРЫ ЗА 60 ДНЕЙ! ОТ 3900 РУБ/М2</div>
+											<div class="sepr-hr brd-w my-2"></div>
+											<div class="row justify-content-center">ОНЛАЙН - ТРАНСЛЯЦИЯ ВАШЕГО РЕМОНТА</div>
+											<div class="row justify-content-center font-bold mt-1">ПРОПИСЫВАЕМ ГАРАНТИЮ В ДОГОВОРЕ НА 5 ЛЕТ!</div>
 										</div>
 									</div>
-									<div class="container">
-										<div class="col-12"></div>
+								</div>
+								<!-- Ряд 3-->
+								<div class="row flex-column align-items-center">
+									<div class="col-12 text-center my-5 banner__bottom">
+										<div class="banner__bottom1 p-3 bg-w">
+											<div class="banner__bottom-row1">
+												<h1>Сэкономим до 30% на работах</h1>
+											</div>
+											<div class="banner__bottom-row2">
+												<h4>Сравните цены с конкурентами сделав экспресс-рассчет</h4>
+											</div>
+										</div>
+										<div class="banner__bottom2 py-4 bg-lg">ВАМ БУДЕТ ДОСТАТОЧНО 2 МИН ЧТОБЫ ОПРЕДЕЛИТЬ ПРИМЕРНУЮ
+											<br/>СТОИМОСТЬ ВАШЕГО РЕМОНТА И ДЛЯ ЭТОГО ДАЖЕ НЕ НУЖНО
+											<br/>СОЗВАНИВАТЬСЯ С МЕНЕДЖЕРОМ НАШЕЙ КОМПАНИИ.</div>
 									</div>
 								</div>
 							</div>
 						</div>
-						<!-- Стрелки-->
 					</div>
+					<!-- Модальное окно-->
+					<div id="callback-banner" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<div class="modal-title">Обратный звонок</div>
+									<button data-dismiss="modal" class="close"></button>
+								</div>
+								<div class="modal-body">
+									<form>
+										<div class="form-group">
+											<label for="#callbackBannerName" class="col-form-label">Ваше имя</label>
+											<input type="text" id="callbackBannerName" class="form-control" />
+										</div>
+										<div class="form-group">
+											<label for="№callbackBannerSirname" class="col-form-label">Ваше имя</label>
+											<input type="text" id="callbackBannerSirname" class="form-control" />
+										</div>
+									</form>
+								</div>
+								<div class="modal-footer">
+									<button class="btn btn-secondary">Отправить заявку </button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Стрелки-->
 				</div>
 			</div>
 			<div class="sepr"></div>
-			<!-- Каталог-->
+		</div>
+		<!-- /слайдер-->
+		<!-- каталог-->
+		<div class="catalog">
 			<div class="container block-catalog">
 				<div class="row justify-content-center">
 					<h2 class="catalog__title">Каталог</h2>
@@ -122,13 +171,18 @@
 				</div>
 			</div>
 			<div class="sepr"></div>
-			<!-- ООО Клевер - это ... (11 блоков)-->
+			<div class="sepr"></div>
+		</div>
+		<!-- /каталог-->
+		<!-- Клевер - это ...-->
+		<div class="cleveris bg-lg">
 			<div class="container cleveris">
 				<div class="row">
 					<div class="col-12">
-						<h1 class="text-center">ООО "Клевер" - это</h1>
+						<div class="sepr"></div>
+						<h2 class="text-center">ООО "Клевер" - это</h2>
 					</div>
-					<div class="col-12 bg-lg p-2 m-1">
+					<div class="col-12 brd-w p-2 m-1">
 						<div class="row">
 							<div class="col-2">
 								<div class="h100 bg-g d-flex justify-content-center align-items-center c-w">Картинка</div>
@@ -136,7 +190,7 @@
 							<div class="col-10">1.Автоматические системы управления для Дома и бизнеса –комфорт, энергосбережение, безопасность, контроль.</div>
 						</div>
 					</div>
-					<div class="col-12 bg-lg p-2 m-1">
+					<div class="col-12 brd-w p-2 m-1">
 						<div class="row">
 							<div class="col-2">
 								<div class="h100 bg-g d-flex justify-content-center align-items-center c-w">Картинка</div>
@@ -145,7 +199,7 @@
 								– электрокарнизы с пультом ДУ, электрошторы, маркизы от производителей Италии, Германии, Франции,КНР, Испании.</div>
 						</div>
 					</div>
-					<div class="col-12 bg-lg p-2 m-1">
+					<div class="col-12 brd-w p-2 m-1">
 						<div class="row">
 							<div class="col-2">
 								<div class="h100 bg-g d-flex justify-content-center align-items-center c-w">Картинка</div>
@@ -154,7 +208,7 @@
 								дистанционно через телефон, ноутбук. Отправка фотосообщений событий. Хранение информации свыше 45 суток;.</div>
 						</div>
 					</div>
-					<div class="col-12 bg-lg p-2 m-1">
+					<div class="col-12 brd-w p-2 m-1">
 						<div class="row">
 							<div class="col-2">
 								<div class="h100 bg-g d-flex justify-content-center align-items-center c-w">Картинка</div>
@@ -164,7 +218,7 @@
 								за счет экономии электричества;</div>
 						</div>
 					</div>
-					<div class="col-12 bg-lg p-2 m-1">
+					<div class="col-12 brd-w p-2 m-1">
 						<div class="row">
 							<div class="col-2">
 								<div class="h100 bg-g d-flex justify-content-center align-items-center c-w">Картинка</div>
@@ -176,7 +230,7 @@
 								суток, обратная он-лайн связь с Хозяином , проверенное современное веб-приложение.</div>
 						</div>
 					</div>
-					<div class="col-12 bg-lg p-2 m-1">
+					<div class="col-12 brd-w p-2 m-1">
 						<div class="row">
 							<div class="col-2">
 								<div class="h100 bg-g d-flex justify-content-center align-items-center c-w">Картинка</div>
@@ -184,7 +238,7 @@
 							<div class="col-10">6. Сценарии работы автоматики - в подарок!</div>
 						</div>
 					</div>
-					<div class="col-12 bg-lg p-2 m-1">
+					<div class="col-12 brd-w p-2 m-1">
 						<div class="row">
 							<div class="col-2">
 								<div class="h100 bg-g d-flex justify-content-center align-items-center c-w">Картинка</div>
@@ -192,7 +246,7 @@
 							<div class="col-10">7. Индивидуальные условия оплаты, отсрочка платежа по договору до 3-х месяцев.</div>
 						</div>
 					</div>
-					<div class="col-12 bg-lg p-2 m-1">
+					<div class="col-12 brd-w p-2 m-1">
 						<div class="row">
 							<div class="col-2">
 								<div class="h100 bg-g d-flex justify-content-center align-items-center c-w">Картинка</div>
@@ -200,7 +254,7 @@
 							<div class="col-10">8. Монтаж - от одного дня.</div>
 						</div>
 					</div>
-					<div class="col-12 bg-lg p-2 m-1">
+					<div class="col-12 brd-w p-2 m-1">
 						<div class="row">
 							<div class="col-2">
 								<div class="h100 bg-g d-flex justify-content-center align-items-center c-w">Картинка</div>
@@ -208,7 +262,7 @@
 							<div class="col-10">9. Гарантия на оборудование - от 2-х лет. На умные системы - от 3-х лет. Гарантия на работу - бессрочная.</div>
 						</div>
 					</div>
-					<div class="col-12 bg-lg p-2 m-1">
+					<div class="col-12 brd-w p-2 m-1">
 						<div class="row">
 							<div class="col-2">
 								<div class="h100 bg-g d-flex justify-content-center align-items-center c-w">Картинка</div>
@@ -217,29 +271,36 @@
 								</div>
 						</div>
 					</div>
-					<div class="col-12 bg-lg p-2 m-1">
+					<div class="col-12 brd-w p-2 m-1">
 						<div class="row">
 							<div class="col-2">
 								<div class="h100 bg-g d-flex justify-content-center align-items-center c-w">Картинка</div>
 							</div>
 							<div class="col-10">11. Гарантийное и постгарантийное сопровождение, скорая техническая помощь,пунктуальные,аккуратные мастера, - это
-								мир сервиса "КЛЕВЕР".</div>
+								мир сервиса "КЛЕВЕР". </div>
 						</div>
 					</div>
-					<div class="row">
-						<h4>Мир умной автоматики для Вашего Дома</h4>
-					</div>
+				</div>
+				<div class="row justify-content-end flex-row mt-3">
+					<h4>Мир умной автоматики для Вашего Дома</h4>
 				</div>
 			</div>
 			<div class="sepr"></div>
-			<!-- Обращение директора-->
-			<div class="container-fluid block-dream bg-lg">
+			<div class="sepr"></div>
+		</div>
+		<!-- /Клевер - это ...-->
+		<!-- Наша команда-->
+		<div class="team">
+			<div class="director">
 				<div class="container">
 					<div class="sepr"></div>
-					<div class="row justify-content-center">
-						<h1>Обращение директора</h1>
+					<div class="director-title">
+						<h1 class="text-center">Обращение директора</h1>
 					</div>
-					<div class="row text-left">Здравствуйте, дорогие Друзья, Клиенты и Партнеры!
+					<div class="sepr"></div>
+					<div class="text-left">
+						<span style="line-height: 40px;" class="font-bold pb-2">Здравствуйте, дорогие Друзья, Клиенты и Партнеры!</span>
+						<div class="director-photo float-right bg-g ml-3 mb-3 c-lg d-flex justify-content-center align-items-center">фото директора</div>
 						<br/>Я – Владимир Жмур, основатель и директор по развитию компании «КЛЕВЕР».
 						<br/>Благодарю Вас за проявленный интерес к нашей продукции.
 						<br/>«КЛЕВЕР» – молодая севастопольская компания, созданная для предоставления жителям Крыма услуг по автоматизации комфорта
@@ -253,46 +314,256 @@
 						<br/>IP-видеонаблюдение;
 						<br/>видеодомофоны;
 						<br/>энергосбережение и контроль доступа для гостиниц и офисов, программы учета работы персонала.
-						<br/>Наша миссия – инновационная автоматика в каждый Дом и офис.
 						<br/>
-						<h4 class="text-center">Добро пожаловать в мир инноваций «КЛЕВЕР»!</h4>
+						<div class="font-bold">Наша миссия – инновационная автоматика в каждый Дом и офис.</div>
+						<br/>
+						<h4 class="text-center mt-2">Добро пожаловать в мир инноваций «КЛЕВЕР»!</h4>
 					</div>
-					<div class="row justify-content-center">
-						<br/>+
-						<br/>наша команда (3 человека)</div>
+					<div class="sepr"></div>
+					<div class="sepr-hr brd-g"></div>
+					<div class="sepr"></div>
+				</div>
+				<div class="container">
+					<h2 class="text-center">Наша команда (3 человека)</h2>
+					<div class="sepr"></div>
+					<div class="row flex-row">
+						<div class="col-4">
+							<div class="team-prsn bg-lg brd-w">
+								<div class="team-prsn__photo bg-g"></div>
+								<div class="team-prsn__about px-3">
+									<div class="team-prsn__title pt-4">Сергей Иванов</div>
+									<div class="team-prsn__text pb-4">заместитель директора</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-4">
+							<div class="team-prsn bg-lg brd-w">
+								<div class="team-prsn__photo bg-g"></div>
+								<div class="team-prsn__about px-3">
+									<div class="team-prsn__title pt-4">Иван Сергеев</div>
+									<div class="team-prsn__text pb-4">инженер-наладчик</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-4">
+							<div class="team-prsn bg-lg brd-w">
+								<div class="team-prsn__photo bg-g"></div>
+								<div class="team-prsn__about px-3">
+									<div class="team-prsn__title pt-4">Сергей Иванов</div>
+									<div class="team-prsn__text pb-4">специалист по коммуникациям</div>
+								</div>
+							</div>
+						</div>
+					</div>
 					<div class="sepr"></div>
 				</div>
 			</div>
 			<div class="sepr"></div>
-			<!-- Галерея-->
-			<div class="container-fluid block-dream h100 bg-lg">Галерея, прокрутка(карусель) (+ захват)</div>
 			<div class="sepr"></div>
-			<!-- Отзывы-->
-			<div class="container-fluid block-dream h100 bg-lg">Отзывы</div>
+		</div>
+		<!-- /Наша команда-->
+		<!-- Галерея-->
+		<div class="gallery bg-lg">
 			<div class="sepr"></div>
-			<!-- Нам доверяют-->
-			<div class="container-fluid block-dream h100 bg-lg">Нам доверяют: (3 логотипа компаний)</div>
+			<div class="block-dream">
+				<h2 class="col-12">Галерея, прокрутка(карусель)</h2>
+			</div>
 			<div class="sepr"></div>
-			<!-- Сео текст-->
-			<div class="container-fluid block-dream h100 bg-lg">Сео текст</div>
+			<div class="gallery-slider">
+				<div class="gallery-item bg-g c-lg brd-lg">изображение 1</div>
+				<div class="gallery-item bg-g c-lg brd-lg">изображение 2</div>
+				<div class="gallery-item bg-g c-lg brd-lg">изображение 3</div>
+				<div class="gallery-item bg-g c-lg brd-lg">изображение 4</div>
+				<div class="sepr"></div>
+			</div>
 			<div class="sepr"></div>
-			<!-- Футер-->
-			<div class="container-fluid block-dream h100 bg-lg">Футер + Контакты + Карта + Захват</div>
 			<div class="sepr"></div>
-			<!-- Чат, ЛЛ-->
+		</div>
+		<!-- /Галерея-->
+		<!-- Отзывы-->
+		<div class="reviews">
+			<div class="container">
+				<div class="sepr"></div>
+				<h2 class="text-center">Отзывы</h2>
+				<div class="sepr"></div>
+				<!-- Слайдер с отзывами-->
+				<div class="reviews-wrap">
+					<div class="reviews-slider">
+						<div class="reviews__item">
+							<div class="review">
+								<div class="review__item-img d-flex justify-content-center align-items-center c-w">Фото</div>
+								<div class="review__item-cntnt">
+									<div class="review__item-cntnt-ttl">Мария</div>
+									<div class="review__item-cntnt-ttl-city">г. Севастополь </div>
+									<div class="review__item-cntnt-txt">Заказывали систему умного дома. Порадовало соотношение цены и качества. Очень вежливые ребята, подробно ответили
+										на все мои вопросы. Обязательно буду рекомендовать компанию своим знакомым.</div>
+								</div>
+							</div>
+						</div>
+						<div class="reviews__item">
+							<div class="review">
+								<div class="review__item-img d-flex justify-content-center align-items-center c-w">Фото</div>
+								<div class="review__item-cntnt">
+									<div class="review__item-cntnt-ttl">Мария</div>
+									<div class="review__item-cntnt-ttl-city">г. Севастополь </div>
+									<div class="review__item-cntnt-txt">Заказывали систему умного дома. Порадовало соотношение цены и качества. Очень вежливые ребята, подробно ответили
+										на все мои вопросы. Обязательно буду рекомендовать компанию своим знакомым.</div>
+								</div>
+							</div>
+						</div>
+						<div class="reviews__item">
+							<div class="review">
+								<div class="review__item-img d-flex justify-content-center align-items-center c-w">Фото</div>
+								<div class="review__item-cntnt">
+									<div class="review__item-cntnt-ttl">Мария</div>
+									<div class="review__item-cntnt-ttl-city">г. Севастополь </div>
+									<div class="review__item-cntnt-txt">Заказывали систему умного дома. Порадовало соотношение цены и качества. Очень вежливые ребята, подробно ответили
+										на все мои вопросы. Обязательно буду рекомендовать компанию своим знакомым.</div>
+								</div>
+							</div>
+						</div>
+						<div class="reviews__item">
+							<div class="review">
+								<div class="review__item-img d-flex justify-content-center align-items-center c-w">Фото</div>
+								<div class="review__item-cntnt">
+									<div class="review__item-cntnt-ttl">Мария</div>
+									<div class="review__item-cntnt-ttl-city">г. Севастополь </div>
+									<div class="review__item-cntnt-txt">Заказывали систему умного дома. Порадовало соотношение цены и качества. Очень вежливые ребята, подробно ответили
+										на все мои вопросы. Обязательно буду рекомендовать компанию своим знакомым.</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="sepr"></div>
+		</div>
+		<!-- /Отзывы-->
+		<!-- Нам доверяют-->
+		<div class="partners">
+			<div class="partners bg-lg">
+				<div class="container">
+					<div class="sepr"></div>
+					<h2 class="partners-title text-center">Нам доверяют: (3 логотипа компаний)</h2>
+					<div class="sepr"></div>
+					<div class="row">
+						<div class="partners-item-wrap col-4">
+							<div class="partners-item brd-w bg-g c-w centerAll d-flex">фото логотипа компании</div>
+						</div>
+						<div class="partners-item-wrap col-4">
+							<div class="partners-item brd-w bg-g c-w centerAll d-flex">фото логотипа компании</div>
+						</div>
+						<div class="partners-item-wrap col-4">
+							<div class="partners-item brd-w bg-g c-w centerAll d-flex">фото логотипа компании</div>
+						</div>
+					</div>
+					<div class="sepr"></div>
+					<div class="sepr"></div>
+				</div>
+			</div>
+		</div>
+		<!-- /Нам доверяют-->
+		<!-- Сео-текст-->
+		<div class="seotext">
+			<div class="seotext">
+				<div class="sepr"></div>
+				<div class="container">
+					<h2 class="seotext__ttl text-center">Сео текст для главной страницы</h2>
+					<div class="seotext__txt">Sed porttitor lectus nibh. Donec sollicitudin molestie malesuada. Praesent sapien massa, convallis a pellentesque nec,
+						egestas non nisi. Curabitur aliquet quam id dui posuere blandit. Vestibulum ac diam sit amet quam vehicula elementum
+						sed sit amet dui. Curabitur aliquet quam id dui posuere blandit. Proin eget tortor risus. Vestibulum ac diam sit amet
+						quam vehicula elementum sed sit amet dui. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec
+						rutrum congue leo eget malesuada.</div>
+					<div id="seotext__txt-more-cntnt" class="seotext__txt-more-cntnt collapse">Sed porttitor lectus nibh. Donec sollicitudin molestie malesuada. Praesent sapien massa, convallis a pellentesque nec,
+						egestas non nisi. Curabitur aliquet quam id dui posuere blandit. Vestibulum ac diam sit amet quam vehicula elementum
+						sed sit amet dui. Curabitur aliquet quam id dui posuere blandit. Proin eget tortor risus. Vestibulum ac diam sit amet
+						quam vehicula elementum sed sit amet dui. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec
+						rutrum congue leo eget malesuada.</div>
+					<a href="#seotext__txt-more-cntnt" data-toggle="collapse" class="seotext__txt-more-btn">Подробнее</a>
+				</div>
+			</div>
+			<div class="sepr"></div>
+		</div>
+		<!-- Сео-текст-->
+		<!-- Футер-->
+		<div class="footer">
+			<div class="footer bg-lg">
+				<div class="sepr"></div>
+				<h2 class="text-center">Футер + Контакты + Карта</h2>
+				<div class="sepr"></div>
+				<div class="container">
+					<div class="row">
+						<div class="col-3">
+							<div class="footer__logo bg-g"></div>
+							<div class="footer__descrn">Nulla porttitor accumsan tincidunt. Donec sollicitudin molestie malesuada. Vivamus suscipit tortor eget felis porttitor
+								volutpat. Pellentesque in ipsum id orci porta dapibus.</div>
+						</div>
+						<div class="col-3">
+							<div class="footer__menu d-flex justify-content-center">
+								<ul class="footer__menu-li">
+									<li>
+										<a href="#">Главная</a>
+									</li>
+									<li>
+										<a href="#">О компании</a>
+									</li>
+									<li>
+										<a href="#">Каталог</a>
+									</li>
+									<li>
+										<a href="#">Статьи</a>
+									</li>
+									<li>
+										<a href="#">Галерея</a>
+									</li>
+									<li>
+										<a href="#">Контакты</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-3">
+							<div class="footer__contacts">+7 (978) 055-19-09,
+								<br/>+7 (978) 090-41-31,
+								<br/>+7 (915) 259-77-17
+								<br/>info@top-clever.ru
+								<br/>г. Севастополь,
+								<br/>ул. Курганная, 6</div>
+						</div>
+						<div class="col-3">
+							<div class="footer__map">
+								<iframe src="https://yandex.by/map-widget/v1/-/CBqTQ4DhpB" width="100%" height="200" frameborder="0"></iframe>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="sepr"></div>
+			</div>
+		</div>
+		<!-- /Футер-->
+		<!-- Ловец лидов-->
+		<div class="ll">
 			<div class="container-fluid">
-				<div class="row fixed-bottom align-items-center c-w">
+				<div class="row align-items-center c-w fixed-bottom">
 					<div class="col-6">
 						<div class="h50 bg-g chat brd-w">Чат</div>
 					</div>
 					<div class="col-6 d-flex justify-content-end">
-						<div class="bg-g phone">Звонок</div>
+						<div class="bg-g phone brd-w">Звонок</div>
 					</div>
 				</div>
 			</div>
 		</div>
+		<!-- /Ловец лидов-->
+		<!-- jquery-->
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script src="/assets/scripts/app.min.js"></script>
 		<!-- Bootstrap-->
 		<script src="js/bootstrap.js"></script>
+		<!-- Slick-->
+		<script src="slick/slick.js"></script>
+		<!-- Slick initiate-->
+		<script src="slick/slick-init.js"></script>
 	</body>
 
 </html>
